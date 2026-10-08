@@ -1,0 +1,33 @@
+# Ignore everything not needed in the Docker build context
+# This dramatically speeds up `docker compose up --build`
+
+# Frontend (built by its own service)
+frontend/node_modules
+frontend/.next
+
+# Git history
+.git
+.gitignore
+
+# IDE / OS
+.idea
+.vscode
+*.swp
+.DS_Store
+Thumbs.db
+
+# Python caches
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.egg-info
+.pytest_cache
+.coverage
+
+# Dev artifacts
+*.log
+logs/
+
+# Local uploads (mounted as volume at runtime)
+backend/uploads/
